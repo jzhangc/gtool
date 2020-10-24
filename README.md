@@ -1,3 +1,31 @@
+# Updates to the FORKed
+-  Now reapt% function is added
+    - This follows the FASTA genome convention where lower cases bases are part of repeats
+
+# Usage
+The script takes a file, list of files or can read from `stdin` using `-` as input.
+
+```
+$ ./gtool.py --help
+usage: gtool.py [-h] [-s] [-g] [-r] [-c CONTIG] [-e start stop] seqIn [seqIn ...]
+
+positional arguments:
+  seqIn                 Genome, list of genome or stdin (uses '-' for stdin)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s, --size            Show size.
+  -g, --gcontent        Show %GC content.
+  -r, --rcontent        Show %repeat. 
+  -c CONTIG, --contig CONTIG
+                        Specify contig to work on, supports regular
+                        expressions.
+  -e start stop, --extract start stop
+                        Extract sequence from START to STOP, works only with
+                        -c and stops at the first match.
+
+
+------------------------- Orignal version by oXis -------------------
 # Introduction
 When doing bioinformatics/genomics you always manipulate fasta files (at least I do) and often you need the size/GC content of your genomes as a quick check. Or after a blast you have the coordinates of a match and you want to extract the sequence for future analysis. This why I wrote this small script.    
 The script should be very fast, each fasta file is read only once and nothing is stored in memory (except the extracted contig).
