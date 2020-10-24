@@ -1,5 +1,5 @@
 # Updates to the FORKed
--  Now reapt% function is added
+-  Now repeat% function is added
     - This follows the FASTA genome convention where lower cases bases are part of repeats
 
 # Usage
