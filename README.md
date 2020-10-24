@@ -23,7 +23,7 @@ optional arguments:
   -e start stop, --extract start stop
                         Extract sequence from START to STOP, works only with
                         -c and stops at the first match.
-
+```
 
 # ------ Below: original instruction by oXis ------
 # Introduction
