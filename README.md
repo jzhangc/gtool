@@ -1,8 +1,10 @@
 # Updates to the FORKed
--  Now repeat% function is added
+- Now repeat% function is added
     - This follows the FASTA genome convention where lower cases bases are part of repeats
 
-# Usage
+- New function utconv.py added to convert U and T
+
+# Usage: gtool.py
 The script takes a file, list of files or can read from `stdin` using `-` as input.
 
 ```
@@ -24,6 +26,27 @@ optional arguments:
                         Extract sequence from START to STOP, works only with
                         -c and stops at the first match.
 ```
+
+# Usage: utconv.py
+The script takes a file, list of files or can read from `stdin` using `-` as input.
+It stores "U->T" or "T->U" converted file with ".ut" in file names. 
+If -c is used, the script stores the converted contig as a new file. 
+
+```
+$ ./utconv.py --help
+usage: utconv.py [-h] [-s] [-c CONTIG] seqIn [seqIn ...]
+
+positional arguments:
+  seqIn                 genome, list of genome or stdin (uses '-' for stdin)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s, --size            show size.
+  -c CONTIG, --contig CONTIG
+                        specify contig to work on, supports regular
+                        expressions.
+```
+
 
 # ------ Below: original instruction by oXis ------
 # Introduction

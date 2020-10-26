@@ -45,7 +45,6 @@ def loadData(seq, stdin):
 
 
 def sizeAndGC(seq, gcontent, rcontent, stdin=False):
-
     fseq, data = loadData(seq, stdin)
 
     count = 0
@@ -88,7 +87,6 @@ def sizeAndGC(seq, gcontent, rcontent, stdin=False):
 
 
 def contigSizeAndGC(seq, contig, gcontent, rcontent, stdin=False):
-
     regex = re.compile(contig)
     dataList = list()
 
